@@ -14,11 +14,14 @@ const options = {
 function App() {
   return (
     <div>
-      <p>React App</p>
+      <div>
+        <input type="checkbox" checked/>
+        <label>label</label>
+      </div>
       <HighchartsReact
-    highcharts={Highcharts}
-    options={options}
-  />
+        highcharts={Highcharts}
+        options={options}
+      />
     </div>
   );
 }
