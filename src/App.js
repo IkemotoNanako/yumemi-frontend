@@ -1,6 +1,7 @@
 import Highcharts from 'highcharts'
 import HighchartsReact from 'highcharts-react-official'
 import React , { Component } from 'react';
+import './App.css';
 
 class App extends Component{
   constructor() {
@@ -29,7 +30,7 @@ class App extends Component{
          tmpPref.push(results.result.data[0].data[key].value)
         ); 
         prefPopulation.push({
-          prefName: this.state.prefectures[index],
+          name: this.state.prefectures[index].prefName,
           data: tmpPref,
         });
         this.setState({series:prefPopulation})
@@ -38,9 +39,9 @@ class App extends Component{
     }else{
       const series_copy = this.state.series.slice();
       for (let i = 0; i < series_copy.length; i++) {
-        console.log(series_copy[i].prefName.prefName);
+        console.log(series_copy[i].name);
 
-        if (series_copy[i].prefName.prefName == this.state.prefectures[index].prefName) {
+        if (series_copy[i].name == this.state.prefectures[index].prefName) {
           series_copy.splice(i, 1);
         }
       }
@@ -85,11 +86,11 @@ class App extends Component{
     };
     return (
       <div>
-        <h1>日本人口の推移</h1>
+        <h2>日本の人口推移</h2>
         <div>
-          <h2>都道府県</h2>
+          <h3>都道府県</h3>
           {Object.keys(obj).map((key) => 
-            <div key={obj[key].prefCode}>
+            <div key={obj[key].prefCode} className="flexbox">
               <input type="checkbox" onChange={() => this._ChangeSelection(obj[key].prefCode - 1)} checked={this.state.selected[obj[key].prefCode - 1]}/>
               <label>{obj[key].prefName}</label>
             </div>

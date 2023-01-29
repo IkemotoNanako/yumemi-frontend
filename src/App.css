@@ -1,0 +1,18 @@
+/* eslint-disable */
+.flexbox{
+    display:inline-block;
+}
+h2{
+    background-color: #fff;
+}
+h2:first-letter{
+    color: crimson;
+    font-size: xxx-large;
+}
+h2:after {
+    content: "";
+    display: block;
+    height: 4px;
+    background: -webkit-linear-gradient(to right, rgb(230, 90, 90), transparent);
+    background: linear-gradient(to right, rgb(230, 90, 90), transparent);
+}
