@@ -39,8 +39,6 @@ class App extends Component{
     }else{
       const series_copy = this.state.series.slice();
       for (let i = 0; i < series_copy.length; i++) {
-        console.log(series_copy[i].name);
-
         if (series_copy[i].name == this.state.prefectures[index].prefName) {
           series_copy.splice(i, 1);
         }
