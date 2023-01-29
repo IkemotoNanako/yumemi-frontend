@@ -85,7 +85,9 @@ class App extends Component{
     };
     return (
       <div>
+        <h1>日本人口の推移</h1>
         <div>
+          <h2>都道府県</h2>
           {Object.keys(obj).map((key) => 
             <div key={obj[key].prefCode}>
               <input type="checkbox" onChange={() => this._ChangeSelection(obj[key].prefCode - 1)} checked={this.state.selected[obj[key].prefCode - 1]}/>
