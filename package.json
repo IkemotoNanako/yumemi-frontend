@@ -14,8 +14,9 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "deploy": "npm run build && gh-pages -d build",
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "cross-env PUBLIC_URL=/yumemi-frontend react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -38,9 +39,11 @@
     ]
   },
   "devDependencies": {
+    "cross-env": "^7.0.3",
     "eslint": "^8.33.0",
     "eslint-config-prettier": "^8.6.0",
     "eslint-plugin-react": "^7.32.2",
+    "gh-pages": "^5.0.0",
     "prettier": "2.8.3"
   }
 }
