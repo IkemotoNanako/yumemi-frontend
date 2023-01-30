@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/yumemi-frontend/static/css/main.5b4f7f7b.css",
+    "main.js": "/yumemi-frontend/static/js/main.6bf28352.js",
+    "index.html": "/yumemi-frontend/index.html",
+    "main.5b4f7f7b.css.map": "/yumemi-frontend/static/css/main.5b4f7f7b.css.map",
+    "main.6bf28352.js.map": "/yumemi-frontend/static/js/main.6bf28352.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5b4f7f7b.css",
+    "static/js/main.6bf28352.js"
+  ]
+}
